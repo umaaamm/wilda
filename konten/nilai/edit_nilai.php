@@ -32,7 +32,7 @@ $query_combo = $koneksi->query("SELECT * FROM tbl_admin");
         <!-- general form elements -->
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">KELOLA ADMIN</h3>
+                <h3 class="box-title">Edit Nilai</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->

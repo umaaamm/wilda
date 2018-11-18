@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SMK N 1 Terusan nyunyai | Registration</title>
+  <title>SMK N 1 Terusan nunyai | Registration</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -29,7 +29,7 @@
 <div class="register-box">
   
   <div class="register-logo">
-    <a href="#">SMKN 1 Terusan Nyunyai</a>
+    <a href="#">SMKN 1 Terusan Nunyai</a>
   </div>
 <?php
 include "koneksi/koneksi.php";

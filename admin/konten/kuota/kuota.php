@@ -1,21 +1,20 @@
 <?php
 @$id_delete = $_GET['id_delete'];
 if (!empty($id_delete)) {
-    $query_hapus = $koneksi->query("DELETE FROM tbl_admin where id_admin='" . $id_delete . "' ");
+    $query_hapus = $koneksi->query("DELETE FROM tbl_kuota where id_kuota='" . $id_delete . "' ");
     echo '<div class="alert alert-success">Data Berhasil di Hapus</div>';
-    echo "<meta http-equiv=refresh content=1;url='?m1=admin&m2=admin'>";
+    echo "<meta http-equiv=refresh content=1;url='?m1=kuota&m2=kuota'>";
 }
 ?>
 
 <?php
 if (isset($_POST['submit'])) {
-    $nama = $_POST['nama'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $level = $_POST['level'];
-    $query_tambah = $koneksi->query("INSERT INTO tbl_admin (nama,username,password,level)values ('".$nama."','" . $username . "','" . $password . "','" . $level . "')");
+    $jurusan = $_POST['jurusan'];
+    $kuota = $_POST['kuota'];
+    
+    $query_tambah = $koneksi->query("INSERT INTO tbl_kuota (jurusan,kuota)values ('".$jurusan."','" . $kuota . "')");
     echo '<div class="alert alert-success">Data Berhasil di Tambah</div>';
-    echo "<meta http-equiv=refresh content=1;url='?m1=admin&m2=admin'>";
+    echo "<meta http-equiv=refresh content=1;url='?m1=kuota&m2=kuota'>";
 }
 ?>
 <div class="row">
@@ -24,33 +23,29 @@ if (isset($_POST['submit'])) {
         <!-- general form elements -->
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Kelola Admin</h3>
+                <h3 class="box-title">Kelola Kuota Kelas</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
             <form role="form" action="" method="post">
                 <div class="box-body">
-                     <div class="form-group">
-                        <label>Nama</label>
-                        <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama" required>
-                    </div>
-                     <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required>
-                    </div>
+
                     <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" class="form-control" name="password" placeholder="Masukkan Password" required>
-                    </div>
-                     <div class="form-group">
-                        <label>Level</label>
-                        <select class="form-control select2" style="width: 100%;" name="level">
-                          <option selected="selected"> -- Level --</option>
-                          <option value="admin">Admin</option>
-                          <option value="kp">Kepala Sekolah</option>
-                          
+                        <label>Jurusan</label>
+                        <select class="form-control select2" style="width: 100%;" name="jurusan">
+                          <option selected="selected"> -- Keahlian Yang Dipilih --</option>
+                          <option value="TEI">Teknik Elektronika Industri</option>
+                          <option value="AKT">Akuntansi</option>  
+                          <option value="TKJ">Teknik Komputer Jaringan</option>  
+                          <option value="TKR">Teknik Kendaraan Ringan</option>  
+                          <!-- <option value="TSM">Teknik Sepeda Motor</option> -->
                         </select>
                       </div>
+                     <div class="form-group">
+                        <label>Kuota</label>
+                        <input type="text" class="form-control" name="kuota" placeholder="Masukkan Kuota Kelas" required>
+                    </div>
+                    
                     <!-- /.box-body -->
 
                     <div class="box-footer">
@@ -63,12 +58,12 @@ if (isset($_POST['submit'])) {
 </div>
 <div class="col-md-8">
     <?php
-    $query = $koneksi->query("SELECT * FROM tbl_admin");
+    $query = $koneksi->query("SELECT * FROM tbl_kuota");
     ?>
 
     <div class="box box-primary">
         <div class="box-header with border">
-            <h3 class="box-title">Data Admin</h3>
+            <h3 class="box-title">Data Kuota Kelas</h3>
         </div>
 
         <div class="box-body">
@@ -76,10 +71,9 @@ if (isset($_POST['submit'])) {
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Nama</th>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Level</th>
+                    <th>Jurusan</th>
+                    <th>Kuota</th>
+                    
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -91,14 +85,13 @@ if (isset($_POST['submit'])) {
 
                     <tr>
                         <td><?= $a ?></td>
-                         <td><?= $tampil['nama'] ?></td>
-                        <td><?= $tampil['username'] ?></td>
-                        <td><?= $tampil['password'] ?></td>
-                        <td><?= $tampil['level'] ?></td>
-                        <td><a href="javascript:;" data-id="<?php echo $tampil['id_admin'] ?>" data-toggle="modal"
+                         <td><?= $tampil['jurusan'] ?></td>
+                        <td><?= $tampil['kuota'] ?></td>
+                       
+                        <td><a href="javascript:;" data-id="<?php echo $tampil['id_kuota'] ?>" data-toggle="modal"
                                data-target="#modal-konfirmasi" class="btn btn-success btn-danger fa fa-trash"></a>&nbsp;<a
                                     href="
-						?m1=admin&m2=edit-admin&id_edit=<?= $tampil['id_admin'] ?>" class="
+						?m1=kuota&m2=edit-kuota&id_edit=<?= $tampil['id_kuota'] ?>" class="
 						btn btn-success btn-warning fa fa-edit"></a></td>
                     </tr>
 
@@ -123,7 +116,7 @@ if (isset($_POST['submit'])) {
                     Apakah Anda yakin ingin menghapus data ini ?
                 </div>
                 <div class="modal-footer">
-                    <a href="javascript:;" class="btn btn-danger" id="hapus-true-data-admin">Hapus</a>
+                    <a href="javascript:;" class="btn btn-danger" id="hapus-true-data-kuota">Hapus</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
                 </div>
 

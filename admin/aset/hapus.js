@@ -9,9 +9,9 @@ var id = div.data('id')
 var modal = $(this)
  
 // Mengisi atribut href pada tombol ya yang kita berikan id hapus-true pada modal .
-modal.find('#hapus-true-data').attr("href","?m1=pendaftar&m2=pendaftar&id_delete="+id);
+modal.find('#hapus-true-data').attr("href","?m1=daftar&m2=pendaftaran&id_delete="+id);
 modal.find('#hapus-true-data-kriteria').attr("href","?m1=kriteria&m2=kriteria&id_delete="+id);
-// modal.find('#hapus-true-data-pembayaran').attr("href","?m1=pembayaran&m2=pembayaran&id_delete="+id);
+modal.find('#hapus-true-data-kuota').attr("href","?m1=kuota&m2=kuota&id_delete="+id);
 modal.find('#hapus-true-data-admin').attr("href","?m1=admin&m2=admin&id_delete="+id);
 // modal.find('#hapus-true-data-anggota').attr("href","?m1=anggota&m2=anggota&id_delete="+id);
 // modal.find('#hapus-true-data-pengaduan').attr("href","?m1=pengaduan&m2=datapengaduan&id_delete="+id);

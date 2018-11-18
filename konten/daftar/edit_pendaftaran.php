@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
               <div class="form-group">
                 <input type="hidden" name="id_register" value="30">
                         <label>Nama</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['nama']?>" name="nama" placeholder="Masukkan Nama Anda" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['nama']?>" name="nama" placeholder="Masukkan Nama Anda" >
                     </div>
                     <div class="form-group">
                         <label>Jenis Kelamin</label>
@@ -86,11 +86,11 @@ if (isset($_POST['submit'])) {
                       </div>
                        <div class="form-group">
                         <label>NIS</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['nis']?>" name="nis" placeholder="Masukkan NIS" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['nis']?>" name="nis" placeholder="Masukkan NIS" >
                     </div>
                      <div class="form-group">
                         <label>NISN</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['nis']?>" name="nisn" placeholder="Masukkan NISN" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['nis']?>" name="nisn" placeholder="Masukkan NISN" >
                     </div>
                      <div class="form-group">
                         <label>Tanggal Lahir</label>
@@ -115,19 +115,19 @@ if (isset($_POST['submit'])) {
                       </div>
                       <div class="form-group">
                         <label>Alamat</label>
-                       <textarea class="form-control" rows="5" name="alamat" placeholder="Masukan Alamat Anda" required><?=$tampil_edit['alamat']?></textarea>
+                       <textarea class="form-control" rows="5" name="alamat" placeholder="Masukan Alamat Anda" ><?=$tampil_edit['alamat']?></textarea>
                     </div>
                     <div class="form-group">
                         <label>No Telpon</label>
-                      <input type="text" class="form-control" value="<?=$tampil_edit['no_telp_rumah']?>" name="no_telp_rumah" placeholder="Masukkan No Telpon" required>
+                      <input type="text" class="form-control" value="<?=$tampil_edit['no_telp_rumah']?>" name="no_telp_rumah" placeholder="Masukkan No Telpon" >
                     </div>
                     <div class="form-group">
                         <label>Tinggi/Berat badan</label>
-                      <input type="text" class="form-control" name="tinggi_badan" value="<?=$tampil_edit['tinggi_badan']?>" placeholder="Masukkan Tinggi Badan" required>
+                      <input type="text" class="form-control" name="tinggi_badan" value="<?=$tampil_edit['tinggi_badan']?>" placeholder="Masukkan Tinggi Badan" >
                     </div>
                     <div class="form-group">
                         <label>Status Dalam Keluarga</label>
-                      <input type="text" class="form-control" name="status_dalam_keluarga" value="<?=$tampil_edit['status_dalam_keluarga']?>" placeholder="Status Dalam Keluarga" required>
+                      <input type="text" class="form-control" name="status_dalam_keluarga" value="<?=$tampil_edit['status_dalam_keluarga']?>" placeholder="Status Dalam Keluarga" >
                     </div>
                     <!-- <div class="form-group">
                         <label>Kewarganegaraan</label>
@@ -135,11 +135,11 @@ if (isset($_POST['submit'])) {
                     </div> -->
                      <div class="form-group">
                         <label>Anak Ke </label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['anak_ke']?>" name="anak_ke" placeholder="Masukkan Anak Ke" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['anak_ke']?>" name="anak_ke" placeholder="Masukkan Anak Ke" >
                     </div>
                     <div class="form-group">
                         <label>Cita Cita </label>
-                        <input type="text" class="form-control" name="cita_cita" value="<?=$tampil_edit['cita_cita']?>" placeholder="Masukkan Cita-Cita" required>
+                        <input type="text" class="form-control" name="cita_cita" value="<?=$tampil_edit['cita_cita']?>" placeholder="Masukkan Cita-Cita" >
                     </div>
                      
                     
@@ -160,19 +160,19 @@ if (isset($_POST['submit'])) {
                       </div>
                       <div class="form-group">
                         <label>Jarak Tempuh</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['jarak_tempuh']?>" name="jarak_tempuh" placeholder="Masukkan Jarak Tempuh" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['jarak_tempuh']?>" name="jarak_tempuh" placeholder="Masukkan Jarak Tempuh" >
                     </div>
                    <div class="form-group">
                         <label>Alat Transportasi</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['alat_transportasi_kesekolah']?>" name="alat_transportasi_kesekolah" placeholder="Masukkan Alat Transportasi" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['alat_transportasi_kesekolah']?>" name="alat_transportasi_kesekolah" placeholder="Masukkan Alat Transportasi" >
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="text" class="form-control" name="email" value="<?=$tampil_edit['email']?>" placeholder="Masukkan Email Anda" required>
+                        <input type="text" class="form-control" name="email" value="<?=$tampil_edit['email']?>" placeholder="Masukkan Email Anda" >
                     </div>
                     <div class="form-group">
                         <label>Kode Pos</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['kode_pos']?>" name="kode_pos" placeholder="Masukkan Kode Pos Anda" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['kode_pos']?>" name="kode_pos" placeholder="Masukkan Kode Pos Anda" >
                     </div>
 
                     <div class="form-group">
@@ -183,7 +183,7 @@ if (isset($_POST['submit'])) {
                           <option <?php if( $tampil_edit['jurusan1']=='AKT'){echo "selected"; } ?> value="AKT">Akuntansi</option>  
                           <option <?php if( $tampil_edit['jurusan1']=='TKJ'){echo "selected"; } ?> value="TKJ">Teknik Komputer Jaringan</option>  
                           <option <?php if( $tampil_edit['jurusan1']=='TKR'){echo "selected"; } ?> value="TKR">Teknik Kendaraan Ringan</option>  
-                          <option <?php if( $tampil_edit['jurusan1']=='TSM'){echo "selected"; } ?> value="TSM">Teknik Sepeda Motor</option>
+                         <!--  <option <?php if( $tampil_edit['jurusan1']=='TSM'){echo "selected"; } ?> value="TSM">Teknik Sepeda Motor</option> -->
                         </select>
                       </div>
                        <div class="form-group">
@@ -194,7 +194,7 @@ if (isset($_POST['submit'])) {
                           <option <?php if( $tampil_edit['jurusan2']=='AKT'){echo "selected"; } ?> value="AKT">Akuntansi</option>  
                           <option <?php if( $tampil_edit['jurusan2']=='TKJ'){echo "selected"; } ?> value="TKJ">Teknik Komputer Jaringan</option>  
                           <option <?php if( $tampil_edit['jurusan2']=='TKR'){echo "selected"; } ?> value="TKR">Teknik Kendaraan Ringan</option>  
-                          <option <?php if( $tampil_edit['jurusan2']=='TSM'){echo "selected"; } ?> value="TSM">Teknik Sepeda Motor</option>
+                          <!-- <option <?php if( $tampil_edit['jurusan2']=='TSM'){echo "selected"; } ?> value="TSM">Teknik Sepeda Motor</option> -->
                         </select>
                       </div>
               <!-- /.form-group -->
@@ -204,65 +204,65 @@ if (isset($_POST['submit'])) {
                
                     <div class="form-group">
                         <label>Nama Orang Tua (Ayah)</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['nama_ayah']?>" name="nama_ayah" placeholder="Masukkan Nama Orang Tua (Ayah)" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['nama_ayah']?>" name="nama_ayah" placeholder="Masukkan Nama Orang Tua (Ayah)" >
                     </div>
                     <div class="form-group">
                         <label>Pekerjaan Ayah</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['pekerjaan_ayah']?>" name="pekerjaan_ayah" placeholder="Masukkan Pekerjaan Ayah" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['pekerjaan_ayah']?>" name="pekerjaan_ayah" placeholder="Masukkan Pekerjaan Ayah" >
                     </div>
                     <div class="form-group">
                         <label>Pendidikan Ayah</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['pendidikan_ayah']?>" name="pendidikan_ayah" placeholder="Masukkan Pendidikan Ayah" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['pendidikan_ayah']?>" name="pendidikan_ayah" placeholder="Masukkan Pendidikan Ayah" >
                     </div>
                     <div class="form-group">
                         <label>Penghasil Ayah</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['penghasilan_ayah']?>" name="penghasilan_ayah" placeholder="Masukkan Penghasilan Ayah" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['penghasilan_ayah']?>" name="penghasilan_ayah" placeholder="Masukkan Penghasilan Ayah" >
                     </div>
                       <div class="form-group">
                         <label>No Telpon Rumah Ayah</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['no_telpon_rumah_ayah']?>" name="no_telpon_rumah_ayah" placeholder="Masukkan Telpon Ayah" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['no_telpon_rumah_ayah']?>" name="no_telpon_rumah_ayah" placeholder="Masukkan Telpon Ayah" >
                     </div>
                    
                     <div class="form-group">
                         <label>Nama Orang Tua (Ibu)</label>
-                        <input type="text" class="form-control" name="nama_ibu" value="<?=$tampil_edit['nama_ibu']?>" placeholder="Masukkan Nama Orang Tua (Ibu)" required>
+                        <input type="text" class="form-control" name="nama_ibu" value="<?=$tampil_edit['nama_ibu']?>" placeholder="Masukkan Nama Orang Tua (Ibu)" >
                     </div>
                     <div class="form-group">
                         <label>Pekerjaan (Ibu)</label>
-                        <input type="text" class="form-control" name="pekerjaan_ibu" value="<?=$tampil_edit['pekerjaan_ibu']?>" placeholder="Masukkan Pekerjaan Ibu" required>
+                        <input type="text" class="form-control" name="pekerjaan_ibu" value="<?=$tampil_edit['pekerjaan_ibu']?>" placeholder="Masukkan Pekerjaan Ibu" >
                     </div>
                     <div class="form-group">
                         <label>Pendidikan (Ibu)</label>
-                        <input type="text" class="form-control" name="pendidikan_ibu" value="<?=$tampil_edit['pendidikan_ibu']?>" placeholder="Masukkan Pendidikan Ibu" required>
+                        <input type="text" class="form-control" name="pendidikan_ibu" value="<?=$tampil_edit['pendidikan_ibu']?>" placeholder="Masukkan Pendidikan Ibu" >
                     </div>
                     <div class="form-group">
                         <label>Penghasilan (Ibu)</label>
-                        <input type="text" class="form-control" name="penghasilan_ibu" value="<?=$tampil_edit['penghasilan_ibu']?>" placeholder="Masukkan Penghasilan Ibu" required>
+                        <input type="text" class="form-control" name="penghasilan_ibu" value="<?=$tampil_edit['penghasilan_ibu']?>" placeholder="Masukkan Penghasilan Ibu" >
                     </div>
                       <div class="form-group">
                         <label>No Telpon Rumah (Ibu)</label>
-                        <input type="text" class="form-control" name="no_telpon_rumah_ibu" value="<?=$tampil_edit['no_telpon_rumah_ibu']?>" placeholder="Masukkan Telpon Ibu" required>
+                        <input type="text" class="form-control" name="no_telpon_rumah_ibu" value="<?=$tampil_edit['no_telpon_rumah_ibu']?>" placeholder="Masukkan Telpon Ibu" >
                     </div>
 
                     <div class="form-group">
                         <label>Nama Wali</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['nama_wali']?>" name="nama_wali" placeholder="Masukkan Nama Orang Tua (Wali)" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['nama_wali']?>" name="nama_wali" placeholder="Masukkan Nama Orang Tua (Wali)" >
                     </div>
                     <div class="form-group">
                         <label>Pekerjaan (Wali)</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['pekerjaan_wali']?>" name="pekerjaan_wali" placeholder="Masukkan Pekerjaan Wali" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['pekerjaan_wali']?>" name="pekerjaan_wali" placeholder="Masukkan Pekerjaan Wali" >
                     </div>
                     <div class="form-group">
                         <label>Pendidikan (Wali)</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['pendidikan_wali']?>" name="pendidikan_wali" placeholder="Masukkan Pendidikan Wali" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['pendidikan_wali']?>" name="pendidikan_wali" placeholder="Masukkan Pendidikan Wali" >
                     </div>
                     <div class="form-group">
                         <label>Penghasil (Wali)</label>
-                        <input type="text" class="form-control" name="penghasilan_wali" value="<?=$tampil_edit['penghasilan_wali']?>" placeholder="Masukkan Penghasilan Wali" required>
+                        <input type="text" class="form-control" name="penghasilan_wali" value="<?=$tampil_edit['penghasilan_wali']?>" placeholder="Masukkan Penghasilan Wali" >
                     </div>
                       <div class="form-group">
                         <label>No Telpon Rumah (Wali)</label>
-                        <input type="text" class="form-control" name="no_telp_wali" value="<?=$tampil_edit['no_telp_wali']?>" placeholder="Masukkan Telpon Wali" required>
+                        <input type="text" class="form-control" name="no_telp_wali" value="<?=$tampil_edit['no_telp_wali']?>" placeholder="Masukkan Telpon Wali" >
                     </div>
                     
               <!-- /.form-group -->
@@ -270,40 +270,40 @@ if (isset($_POST['submit'])) {
             <div class="col-md-4">
                   <div class="form-group">
                         <label>Nama Sekolah Asal</label>
-                        <input type="text" class="form-control" name="nama_asal_sekolah" value="<?=$tampil_edit['nama_asal_sekolah']?>" placeholder="Masukkan Nama Sekolah Asal" required>
+                        <input type="text" class="form-control" name="nama_asal_sekolah" value="<?=$tampil_edit['nama_asal_sekolah']?>" placeholder="Masukkan Nama Sekolah Asal" >
                     </div> 
                     <div class="form-group">
                         <label>Alamat Asal Sekolah</label>
-                       <textarea class="form-control" rows="5"  name="alamat_sekolah_asal" placeholder="Masukan Alamat Asal Sekolah" required><?=$tampil_edit['alamat_sekolah_asal']?></textarea>
+                       <textarea class="form-control" rows="5"  name="alamat_sekolah_asal" placeholder="Masukan Alamat Asal Sekolah" ><?=$tampil_edit['alamat_sekolah_asal']?></textarea>
                     </div>
                     <div class="form-group">
                         <label>Status Sekolah</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['status_sekolah']?>" name="status_sekolah" placeholder="Masukkan Status Sekolah" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['status_sekolah']?>" name="status_sekolah" placeholder="Masukkan Status Sekolah" >
                     </div>
                     <div class="form-group">
                         <label>Kabupaten</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['kabupaten']?>" name="kabupaten" placeholder="Masukkan Kabupaten" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['kabupaten']?>" name="kabupaten" placeholder="Masukkan Kabupaten" >
                     </div>
                     <div class="form-group">
                         <label>Provinsi</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['provinsi']?>" name="provinsi" placeholder="Masukkan Provinsi" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['provinsi']?>" name="provinsi" placeholder="Masukkan Provinsi" >
                     </div>
                     <div class="form-group">
                         <label>Seri Ijazah</label>
-                        <input type="text" class="form-control" value="<?=$tampil_edit['seri_ijazah']?>" name="seri_ijazah" placeholder="Masukkan Seri Ijazah" required>
+                        <input type="text" class="form-control" value="<?=$tampil_edit['seri_ijazah']?>" name="seri_ijazah" placeholder="Masukkan Seri Ijazah" >
                     </div>
                     <div class="form-group">
                         <label>Seri SKHUN</label>
-                        <input type="text" class="form-control" name="seri_skhu" value="<?=$tampil_edit['seri_skhu']?>" placeholder="Masukkan Seri SKHUN" required>
+                        <input type="text" class="form-control" name="seri_skhu" value="<?=$tampil_edit['seri_skhu']?>" placeholder="Masukkan Seri SKHUN" >
                     </div>
                    
                      <div class="form-group">
                         <label>Kode Peserta SMP</label>
-                        <input type="text" class="form-control" name="kode_peserta_smp" value="<?=$tampil_edit['kode_peserta_smp']?>" placeholder="Masukkan Kode Peserta SMP" required>
+                        <input type="text" class="form-control" name="kode_peserta_smp" value="<?=$tampil_edit['kode_peserta_smp']?>" placeholder="Masukkan Kode Peserta SMP" >
                     </div>
                     <div class="form-group">
                         <label>Kode Pos SMP</label>
-                        <input type="text" class="form-control" name="kode_pos_smp" value="<?=$tampil_edit['kode_pos_smp']?>" placeholder="Masukkan Kode Pos SMP" required>
+                        <input type="text" class="form-control" name="kode_pos_smp" value="<?=$tampil_edit['kode_pos_smp']?>" placeholder="Masukkan Kode Pos SMP" >
                     </div>   
             </div>
             <!-- /.col -->

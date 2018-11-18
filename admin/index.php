@@ -13,7 +13,7 @@ if (!empty($_SESSION['username'])){
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Website Pendaftaran SMKN 1 Terusan Nyunyai</title>
+  <title>Website Pendaftaran SMKN 1 Terusan Nunyai</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -87,13 +87,14 @@ if (!empty($_SESSION['username'])){
     <section class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel">
-        <div class="pull-left image">
+        <!-- <div class="pull-left image">
           <img src="aset/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-        </div>
+        </div> -->
         <div class="pull-left info">
           <p><?php echo $_SESSION['username']?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
+        <br><br>
       </div>
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
@@ -116,22 +117,29 @@ if (!empty($_SESSION['username'])){
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-      
+       <?php
+         $temp_page = $_GET['m2'];
+          
+        ?>
           <ul class="treeview-menu">
          
            
             <?php if($_SESSION['level'] == "admin") { ?>
               
           
-            <li class="active"><a href="?m1=admin&m2=admin"><i class="fa fa-circle-o"></i> Admin</a></li>
-            <li class="active"><a href="?m1=daftar&m2=pendaftaran"><i class="fa fa-circle-o"></i> Data Pendaftar</a></li>
-            <li class="active"><a href="?m1=berkas&m2=berkas"><i class="fa fa-circle-o"></i> Berkas Pendaftar</a></li>
-            <li class="active"><a href="?m1=nilai&m2=nilai"><i class="fa fa-circle-o"></i> Kelola Nilai</a></li>
-            <li class="active"><a href="?m1=hasil&m2=hasil"><i class="fa fa-circle-o"></i> Hasil dan Laporan Perhitungan</a></li>
+            <li <?php if($temp_page == "admin") echo "class='active'";?>><a href="?m1=admin&m2=admin"><i class="fa fa-circle-o"></i> Admin</a></li>
+            <li <?php if($temp_page == "pendaftaran") echo "class='active'";?>><a href="?m1=daftar&m2=pendaftaran"><i class="fa fa-circle-o"></i> Data Pendaftar</a></li>
+            <li <?php if($temp_page == "kuota") echo "class='active'";?>><a href="?m1=kuota&m2=kuota"><i class="fa fa-circle-o"></i> Kuota Kelas</a></li>
+            <li <?php if($temp_page == "berkas") echo "class='active'";?>><a href="?m1=berkas&m2=berkas"><i class="fa fa-circle-o"></i> Berkas Pendaftar</a></li>
+            <li <?php if($temp_page == "nilai") echo "class='active'";?>><a href="?m1=nilai&m2=nilai"><i class="fa fa-circle-o"></i> Kelola Nilai</a></li>
+            <li <?php if($temp_page == "hasil") echo "class='active'";?>><a href="?m1=hasil&m2=hasil"><i class="fa fa-circle-o"></i> Hasil dan Laporan Perhitungan</a></li>
+              
+
               <?php }elseif($_SESSION['level'] == "kp"){ ?>
-            <li class="active"><a href="?m1=hasil&m2=hasil"><i class="fa fa-circle-o"></i> Hasil dan Laporan Perhitungan</a></li>
+                <li <?php if($temp_page == "pendaftaran_admin") echo "class='active'";?>><a href="?m1=daftar&m2=pendaftaran_admin"><i class="fa fa-circle-o"></i> Data Pendaftar</a></li>
+            <li <?php if($temp_page == "hasil") echo "class='active'";?>><a href="?m1=hasil&m2=hasil"><i class="fa fa-circle-o"></i> Hasil dan Laporan Perhitungan</a></li>
                <?php } ?>
-            <!-- <li class="active"><a href="?m1=siswa&m2=nilaisiswa"><i class="fa fa-circle-o"></i> Nilai Pendaftar</a></li>  -->
+            <li <?php if($temp_page == "laporan") echo "class='active'";?>><a href="?m1=hasil&m2=laporan"><i class="fa fa-circle-o"></i> Laporan</a></li> 
             <!-- <li class="active"><a href="?m1=hitung&m2=hitung_altenatif"><i class="fa fa-circle-o"></i> Nilai Kriteria</a></li> -->
             <!-- <li class="active"><a href="?m1=hitung&m2=hasil"><i class="fa fa-circle-o"></i> Laporan</a></li> -->
             
@@ -141,7 +149,7 @@ if (!empty($_SESSION['username'])){
             <!-- <li class="active"><a href="?m1=tanggapan&m2=datatanggapan"><i class="fa fa-circle-o"></i> Tanggapan</a></li> -->
             <!-- <li class="active"><a href="?m1=tanggapan&m2=listtanggapan"><i class="fa fa-circle-o"></i> list Tanggapan</a></li> -->
             <!-- <li class="active"><a href="?m1=laporan&m2=laporan"><i class="fa fa-circle-o"></i> Laporan</a></li>  -->
-            <li class="active"><a href="logout.php"><i class="fa fa-circle-o"></i> Logout</a></li>    
+            <li ><a href="logout.php"><i class="fa fa-circle-o"></i> Logout</a></li>    
           </ul>
         </li>
    
@@ -495,6 +503,38 @@ function angka(e) {
   })
    $(document).ready(function() {
                     $('#l3').DataTable( {
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'copy', 'csv', 'excel', 'pdf', 'print'
+                        ]
+                    } );
+                } );
+   $(document).ready(function() {
+                    $('#t1').DataTable( {
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'copy', 'csv', 'excel', 'pdf', 'print'
+                        ]
+                    } );
+                } );
+   $(document).ready(function() {
+                    $('#t2').DataTable( {
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'copy', 'csv', 'excel', 'pdf', 'print'
+                        ]
+                    } );
+                } );
+   $(document).ready(function() {
+                    $('#t3').DataTable( {
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'copy', 'csv', 'excel', 'pdf', 'print'
+                        ]
+                    } );
+                } );
+   $(document).ready(function() {
+                    $('#t4').DataTable( {
                         dom: 'Bfrtip',
                         buttons: [
                             'copy', 'csv', 'excel', 'pdf', 'print'

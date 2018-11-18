@@ -1,5 +1,6 @@
 
 <?php
+
 @$id_delete = $_GET['id_delete'];
 if (!empty($id_delete)) {
     $query_hapus = $koneksi->query("DELETE FROM tbl_berkas where id_berkas='" . $id_delete . "' ");
@@ -12,9 +13,19 @@ if (!empty($id_delete)) {
 
 $quer_id=$koneksi->query("select * from tbl_pendaftar where id_register = '".$_SESSION['id_register']."'");
 $tampil_id = $quer_id->fetch_assoc(); 
-// print_r($tampil_id['id_pendaftar']);die;
+// 
+
 
 if (isset($_POST['submit'])) {
+    $id_pendaftar_cek = $tampil_id['id_pendaftar'];
+ // print_r($id_pendaftar_cek);die;
+    $quer_v=$koneksi->query("select * from tbl_berkas where id_pendaftar = '".$id_pendaftar_cek."'");
+    $tampil_v = mysqli_num_rows($quer_v);
+    // print_r($tampil_v);die;
+    if ($tampil_v > 0 ) {
+        echo '<div class="alert alert-danger">Anda Hanya Dapat Sekali Mengaplout Berkas, Silahkan Edit Berkas Anda.</div>';
+        echo "<meta http-equiv=refresh content=1;url='?m1=berkas&m2=berkas'>";
+    }else{
     $id_pendaftar = $tampil_id['id_pendaftar'];
     //dok_ijazah
     $namagambar_dok_ijazah = $_FILES['dok_ijazah'] ['name'];
@@ -104,10 +115,23 @@ if (isset($_POST['submit'])) {
 
     //query untuk tambah data
     $query_tambah = $koneksi->query("INSERT INTO tbl_berkas (id_pendaftar,dok_ijazah,dok_kartu_ujian,dok_raport,dok_kk,dok_surat_sehat,dok_ktp_ortu,dok_KIP,dok_pas_foto,dok_sertifikat)values ('".$id_pendaftar."','".$namagambar_dok_ijazah."','".$namagambar_dok_kartu_ujian."','".$namagambar_dok_raport."','" .$namagambar_dok_kk ."','".$namagambar_dok_surat_sehat."','".$namagambar_dok_ktp_ortu."','".$namagambar_dok_KIP."','".$namagambar_dok_pas_foto."','".$namagambar_dok_sertifikat."')");
+    $quer_id=$koneksi->query("select * from tbl_pendaftar where id_register = '".$_SESSION['id_register']."'");
+    $tampil_id = $quer_id->fetch_assoc(); 
+    
+    $id_pendaftar= $tampil_id['id_pendaftar'];
+    $rata_un = $_POST['rata_un'];
+    $rata_raport = $_POST['rata_raport'];
+    $nilai_test = '0';
+    $prestasi = '0';
+    $query_tambah = $koneksi->query("INSERT INTO tbl_nilai (id_pendaftar,rata_un,rata_raport,nilai_test,prestasi)values ('".$id_pendaftar."','" . $rata_un . "','" . $rata_raport . "','" . $nilai_test . "','".$prestasi."')");
+
 
     echo '<div class="alert alert-success">Data Berhasil di Tambah</div>';
     echo "<meta http-equiv=refresh content=1;url='?m1=berkas&m2=berkas'>";
 }
+}
+
+// $page = "Berkas";
 ?>
 
 
@@ -126,23 +150,26 @@ if (isset($_POST['submit'])) {
                     
                     <input type="hidden" name="id_pendaftar" value="30">
                     
-                    <label>Dok Ijazah</label>
+                    <label>Dok Ijazah/SKL</label>
                     <div class="form-group">
-                        <input type="file"  name="dok_ijazah" class="form-control" id="btnimage" >
+                        <input type="file"  name="dok_ijazah" class="form-control" id="btnimage" ><br>
+                        <input type="text" class="form-control" name="rata_un" placeholder="Masukkan Nilai UN" required>
                     </div>
-                     <label>Dok Kartu Ujian</label>
+                     <label>Dok Kartu Ujian Nasional SMP/MTs *Tidak Wajib</label>
                     <div class="form-group">
                         <input type="file"  name="dok_kartu_ujian" class="form-control" id="btnimage" >
+                        
                     </div>
                      <label>Dok Raport</label>
                     <div class="form-group">
-                        <input type="file"  name="dok_raport" class="form-control" id="btnimage" >
+                        <input type="file"  name="dok_raport" class="form-control" id="btnimage" ><br>
+                        <input type="text" class="form-control" name="rata_raport" placeholder="Masukkan Nilai Rata-Rata Raport" required>
                     </div>
                      <label>Dok Kartu Keluarga</label>
                     <div class="form-group">
                         <input type="file"  name="dok_kk" class="form-control" id="btnimage" >
                     </div>
-                     <label>Dok Surat Sehat</label>
+                     <label>Dok Surat Sehat *Tidak Wajib</label>
                     <div class="form-group">
                         <input type="file" name="dok_surat_sehat" class="form-control" id="btnimage" >
                     </div>
@@ -150,7 +177,7 @@ if (isset($_POST['submit'])) {
                     <div class="form-group">
                         <input type="file"  name="dok_ktp_ortu" class="form-control" id="btnimage" >
                     </div>
-                     <label>Dok KIP</label>
+                     <label>Dok KIP *Tidak Wajib</label>
                     <div class="form-group">
                         <input type="file"  name="dok_KIP" class="form-control" id="btnimage" >
                     </div>
@@ -158,7 +185,7 @@ if (isset($_POST['submit'])) {
                     <div class="form-group">
                         <input type="file"  name="dok_pas_foto" class="form-control" id="btnimage">
                     </div>
-                     <label>Dok Sertifikat</label>
+                     <label>Dok Sertifikat Prestasi *Tidak Wajib</label>
                     <div class="form-group">
                         <input type="file" name="dok_sertifikat" class="form-control" id="btnimage">
                     </div>
@@ -191,7 +218,7 @@ if (isset($_POST['submit'])) {
                 <tr>
                     <th>No</th>
                     <th>Kode Pendaftar</th>
-                    <th>Dokumen Ijazah</th>
+                    <th>Dokumen Ijazah/SKL</th>
                     <th>Dokumen Kartu Ujian</th>
                     <th>Dokumen Raport</th>
                     <th>Dokumen KK</th>

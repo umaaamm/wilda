@@ -23,36 +23,7 @@ if (isset($_POST['submit'])) {
 ?>
 <div class="row">
     <!-- left column -->
-    <div class="col-md-4">
-        <!-- general form elements -->
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">Kelola Nilai</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form role="form" action="" method="post">
-                <div class="box-body">
-                    
-                     <div class="form-group">
-                        <label>Rata-Rata UN</label>
-                        <input type="text" class="form-control" name="rata_un" placeholder="Masukkan Rata-Rata UN" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Rata-Rata Raport</label>
-                        <input type="text" class="form-control" name="rata_raport" placeholder="Masukkan Rata-Rata Raport" required>
-                    </div>
-                    
-                    <!-- /.box-body -->
-
-                    <div class="box-footer">
-                        <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
-                        <button type="reset" name="reset" class="btn btn-danger">Reset</button>
-                    </div>
-            </form>
-        </div>
-    </div>
-</div>
+    
 <div class="col-md-8">
     <?php
     $query = $koneksi->query("SELECT * FROM tbl_nilai where id_pendaftar='".$_SESSION['id_pendaftar_temp']."'");
@@ -68,7 +39,7 @@ if (isset($_POST['submit'])) {
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Rata-Rata UN</th>
+                    <th>Nilai UN</th>
                     <th>Rata-Rata Raport</th>
                     <th>Action</th>
                 </tr>
@@ -97,7 +68,7 @@ if (isset($_POST['submit'])) {
             </table>
         </div>
     </div>
-
+</div>
     <div id="modal-konfirmasi" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
          aria-hidden="true">
         <div class="modal-dialog">

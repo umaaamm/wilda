@@ -14,8 +14,8 @@
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>Kode Pendaftar</th>
-                    <th>Dokumen Ijazah</th>
+                    <th>Nama Pendaftar</th>
+                    <th>Dokumen Ijazah/SKL</th>
                     <th>Dokumen Kartu Ujian</th>
                     <th>Dokumen Raport</th>
                     <th>Dokumen KK</th>

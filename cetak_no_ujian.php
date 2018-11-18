@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SMKN 1 Terusan Nyunyai | Kartu Ujian</title>
+	<title>SMKN 1 Terusan Nunyai | Kartu Ujian</title>
 </head>
 <body>
 	<?php
@@ -25,9 +25,11 @@ $tampil_id = $quer_id->fetch_assoc();
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-0pky" align="center"><img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=<?=$tampil_id['id_pendaftar']?>&choe=UTF-8" title="Link to Google.com" />
-    	<br>
-    <h5 align="center">Nama : <?=$tampil_id['nama']; ?><h5></th>
+    <th class="tg-0pky" align="center"><!-- <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=<?=$tampil_id['id_pendaftar']?>&choe=UTF-8" title="Link to Google.com" /> -->
+    				<h3 align="center">Nomor Ujian Anda : </h3>
+    			<h1 align="center" style="font-size: 50px;">00<?=$tampil_id['id_pendaftar']?></h1>
+    <h5 align="center">Nama : <?=$tampil_id['nama']; ?><h5>
+    	<h5 align="center">Jenis Kelamin : <?=$tampil_id['jenis_kelamin']; ?><h5></th>
   </tr>
 </table>
 

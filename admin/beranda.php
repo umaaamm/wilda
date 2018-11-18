@@ -10,7 +10,7 @@
       </div>
       
       <div class="box-body">
-       <h2> Website Pendaftaran SMKN 1 Terusan Nyunyai</h2>
+       <h2> Website Pendaftaran SMKN 1 Terusan Nunyai</h2>
       </div>
 </div>  
       </div>

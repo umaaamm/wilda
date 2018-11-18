@@ -183,7 +183,7 @@ if (isset($_POST['submit'])) {
                           <option <?php if( $tampil_edit['jurusan1']=='AKT'){echo "selected"; } ?> value="AKT">Akuntansi</option>  
                           <option <?php if( $tampil_edit['jurusan1']=='TKJ'){echo "selected"; } ?> value="TKJ">Teknik Komputer Jaringan</option>  
                           <option <?php if( $tampil_edit['jurusan1']=='TKR'){echo "selected"; } ?> value="TKR">Teknik Kendaraan Ringan</option>  
-                          <option <?php if( $tampil_edit['jurusan1']=='TSM'){echo "selected"; } ?> value="TSM">Teknik Sepeda Motor</option>
+                          <!-- <option <?php if( $tampil_edit['jurusan1']=='TSM'){echo "selected"; } ?> value="TSM">Teknik Sepeda Motor</option> -->
                         </select>
                       </div>
                        <div class="form-group">
@@ -194,7 +194,7 @@ if (isset($_POST['submit'])) {
                           <option <?php if( $tampil_edit['jurusan2']=='AKT'){echo "selected"; } ?> value="AKT">Akuntansi</option>  
                           <option <?php if( $tampil_edit['jurusan2']=='TKJ'){echo "selected"; } ?> value="TKJ">Teknik Komputer Jaringan</option>  
                           <option <?php if( $tampil_edit['jurusan2']=='TKR'){echo "selected"; } ?> value="TKR">Teknik Kendaraan Ringan</option>  
-                          <option <?php if( $tampil_edit['jurusan2']=='TSM'){echo "selected"; } ?> value="TSM">Teknik Sepeda Motor</option>
+                          <!-- <option <?php if( $tampil_edit['jurusan2']=='TSM'){echo "selected"; } ?> value="TSM">Teknik Sepeda Motor</option> -->
                         </select>
                       </div>
               <!-- /.form-group -->

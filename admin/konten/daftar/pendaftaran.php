@@ -188,7 +188,7 @@ if (isset($_POST['submit'])) {
                           <option value="AKT">Akuntansi</option>  
                           <option value="TKJ">Teknik Komputer Jaringan</option>  
                           <option value="TKR">Teknik Kendaraan Ringan</option>  
-                          <option value="TSM">Teknik Sepeda Motor</option>
+                          <!-- <option value="TSM">Teknik Sepeda Motor</option> -->
                         </select>
                       </div>
                       <div class="form-group">
@@ -199,7 +199,7 @@ if (isset($_POST['submit'])) {
                           <option value="AKT">Akuntansi</option>  
                           <option value="TKJ">Teknik Komputer Jaringan</option>  
                           <option value="TKR">Teknik Kendaraan Ringan</option>  
-                          <option value="TSM">Teknik Sepeda Motor</option>
+                          <!-- <option value="TSM">Teknik Sepeda Motor</option> -->
                         </select>
                       </div>
               <!-- /.form-group -->

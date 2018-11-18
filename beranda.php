@@ -10,7 +10,7 @@
       </div>
       
       <div class="box-body">
-       <h4> Di SMK Negeri 1 Terusan Nyunyai.</h4>
+       <h4> Di SMK Negeri 1 Terusan Nunyai.</h4>
        <br>
        Silahkan Mendaftarkan diri anda di website ini.
       </div>

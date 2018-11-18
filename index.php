@@ -5,6 +5,7 @@ include "koneksi/koneksi.php";
 <?php
 error_reporting(0);
 // print_r($_SESSION['username']);
+
 if (!empty($_SESSION['username_r'])){
 ?>
 
@@ -13,7 +14,7 @@ if (!empty($_SESSION['username_r'])){
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Website Pendaftaran SMKN 1 Terusan Nyunyai</title>
+  <title>Website Pendaftaran SMKN 1 Terusan Nunyai</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -88,7 +89,8 @@ if (!empty($_SESSION['username_r'])){
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="aset/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <!-- <img src="aset/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image"> -->
+          <br><br>
         </div>
         <div class="pull-left info">
           <p><?php echo $_SESSION['username_r']?></p>
@@ -116,7 +118,10 @@ if (!empty($_SESSION['username_r'])){
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-      
+        <?php
+         $temp_page = $_GET['m2'];
+          
+        ?>
           <ul class="treeview-menu">
             <!-- <li class="active"><a href="?m1=admin&m2=admin"><i class="fa fa-circle-o"></i> Admin</a></li>
             <li class="active"><a href="?m1=pendaftar&m2=pendaftar"><i class="fa fa-circle-o"></i> Data Pendaftar</a></li>
@@ -125,15 +130,16 @@ if (!empty($_SESSION['username_r'])){
             <li class="active"><a href="?m1=hitung&m2=hitung_altenatif"><i class="fa fa-circle-o"></i> Nilai Kriteria</a></li>
             <li class="active"><a href="?m1=hitung&m2=hasil"><i class="fa fa-circle-o"></i> Laporan</a></li>
             <li class="active"><a href="?m1=hitung&m2=hasil_kp"><i class="fa fa-circle-o"></i> Laporan</a></li> -->
-            <li class="active"><a href="?m1=daftar&m2=pendaftaran"><i class="fa fa-circle-o"></i> Pendaftaran</a></li>
-            <li class="active"><a href="?m1=berkas&m2=berkas"><i class="fa fa-circle-o"></i> Berkas</a></li>
-            <li class="active"><a href="?m1=nilai&m2=nilai"><i class="fa fa-circle-o"></i> Nilai</a></li>
-            <li class="active"><a href="cetak_no_ujian.php" target="_blank"><i class="fa fa-circle-o"></i> Cetak</a></li>
+            <li <?php if($temp_page == "pendaftaran") echo "class='active'";?>><a href="?m1=daftar&m2=pendaftaran"><i class="fa fa-circle-o"></i> Pendaftaran</a></li>
+            <li <?php if($temp_page == "berkas") echo "class='active'";?>><a href="?m1=berkas&m2=berkas"><i class="fa fa-circle-o"></i> Berkas</a></li>
+            <li <?php if($temp_page == "nilai") echo "class='active'";?>><a href="?m1=nilai&m2=nilai"><i class="fa fa-circle-o"></i> Nilai</a></li>
+            <li ><a href="cetak_no_ujian.php" target="_blank"><i class="fa fa-circle-o"></i> Cetak</a></li>
+            <li <?php if($temp_page == "pengumuman") echo "class='active'";?>><a href="?m1=pengumuman&m2=pengumuman"><i class="fa fa-circle-o"></i> Pengumuman</a></li>
             <!-- <li class="active"><a href="?m1=pengaduan&m2=pengaduananggota"><i class="fa fa-circle-o"></i> Pengaduan Anggota</a></li> -->
             <!-- <li class="active"><a href="?m1=tanggapan&m2=datatanggapan"><i class="fa fa-circle-o"></i> Tanggapan</a></li> -->
             <!-- <li class="active"><a href="?m1=tanggapan&m2=listtanggapan"><i class="fa fa-circle-o"></i> list Tanggapan</a></li> -->
             <!-- <li class="active"><a href="?m1=laporan&m2=laporan"><i class="fa fa-circle-o"></i> Laporan</a></li>  -->
-            <li class="active"><a href="logout.php"><i class="fa fa-circle-o"></i> Logout</a></li>    
+            <li ><a href="logout.php"><i class="fa fa-circle-o"></i> Logout</a></li>    
           </ul>
         </li>
    
@@ -167,6 +173,7 @@ if (!empty($_SESSION['username_r'])){
   else
   {
     include "konten/".$_GET['m1']."/".$_GET['m2'].".php";
+   
   }
   ?>
         </section>
@@ -184,7 +191,7 @@ if (!empty($_SESSION['username_r'])){
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; 2018 | Depi.</strong> All rights
+    <strong>Copyright &copy; 2018 | Wilda.</strong> All rights
     reserved.
   </footer>
 

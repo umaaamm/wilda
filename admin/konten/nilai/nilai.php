@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
-                    <th>Rata-Rata Un</th>
+                    <th>Nilai Un</th>
                     <th>Rata-Rata Raport</th>
                     <th>Nilai Test</th>
                      <th>Prestasi</th>
